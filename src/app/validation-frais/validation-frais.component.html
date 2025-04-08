@@ -1,0 +1,11 @@
+<div class="validation-container">
+    <h1>Validation des Fiches de Frais</h1>
+    <p>Liste des fiches de frais en attente de validation :</p>
+    <ul>
+      <li *ngFor="let fiche of fraisEnAttente">
+        {{ fiche.nom }} - {{ fiche.montant }}€
+        <button (click)="validerFiche(fiche.id)">Valider</button>
+        <button (click)="rejeterFiche(fiche.id)">Rejeter</button>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,25 @@
+<!-- Conteneur principal -->
+<div class="menu-container">
+  <!-- L'image en arrière-plan -->
+  <div class="menu-background"></div>
+
+  <!-- En-tête avec le contenu -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Bienvenue dans notre gestionnaire de Frais</span> {{ userName }}</h1> 
+  </header>
+
+  <!-- Le bouton du menu déroulant -->
+  <button class="menu-button" (click)="toggleMenu()">
+    Menu ▼
+  </button>
+
+
+
+  
+
+  <!-- Menu déroulant -->
+  <div class="dropdown-menu" *ngIf="menuOpen">
+    <ng-container *ngIf="userRole === 'visiteur'">
+      <button (click)="navigateToFraisForm()">Nouvelle Fiche de Frais</button>
+      <button (click)="navigateToFraisList()">Mes Fiches de Frais</button>
+    </ng-container>

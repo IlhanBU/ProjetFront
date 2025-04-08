@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <button class="toggle-btn" (click)="toggleNavbar()">
+    {{ isCollapsed ? '✖' : '☰' }}
+  </button>
+  <ul class="menu-list" [ngClass]="{ 'collapsed': isCollapsed }">
+    <li><a routerLink="/Accueil">Accueil</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/login">Se connecter</a></li>
+    <li *ngIf="isLoggedIn"><button class="logout-btn" (click)="onLogout()">Se déconnecter</button></li>
+  </ul>
+</nav>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

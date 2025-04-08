@@ -1,0 +1,113 @@
+
+
+.navbar {
+  background: linear-gradient(to right, #0080FE, #0080FE);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  gap: 35px; 
+  margin: 0;
+  padding: 0;
+}
+.menu-list li {
+  display: inline;
+}
+.menu-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 15px; 
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px; 
+}
+.menu-list a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffeb3b;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+  .menu-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #4facfe;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    display: none;
+    gap: 15px; 
+  }
+  .menu-list.collapsed {
+    display: flex;
+  }
+  .menu-list li {
+    margin: 10px 0;
+  }
+  .menu-list a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #333;
+    color: rgb(255, 255, 255);
+  }
+  
+  .menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    margin-right: 20px;
+  }
+  
+  .menu-right {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu-right li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu-right li a:hover {
+    text-decoration: underline;
+  }
+  
+
+}

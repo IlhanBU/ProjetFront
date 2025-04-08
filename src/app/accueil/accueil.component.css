@@ -1,0 +1,105 @@
+/* Assure que toute la page occupe toute la hauteur et largeur */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrer horizontalement */
+  justify-content: center; /* Centrer verticalement */
+  height: 100vh; /* Utiliser toute la hauteur de la fenêtre */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Styles pour les boutons du menu déroulant */
+.menu-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #0080FE;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Changer la couleur du bouton au survol */
+.menu-button:hover {
+  background-color: #005f9e;
+}
+
+/* Menu déroulant */
+.dropdown-menu {
+  position: absolute;
+  top: 550px; /* Positionner le menu juste sous le bouton */
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 200px; /* Largeur du menu */
+  z-index: 10; /* S'assurer que le menu est au-dessus de l'image de fond */
+}
+
+/* Style des boutons dans le menu déroulant */
+.dropdown-menu button {
+  background-color: #0080FE;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%; /* Boutons qui prennent toute la largeur du menu */
+}
+
+.dropdown-menu button:hover {
+  background-color: #005f9e; /* Changement de couleur au survol */
+}
+
+/* Image de fond qui occupe toute la page */
+.menu-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('codefff.jpg'); /* Chemin vers ton image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* Applique un flou de 10px */
+  z-index: -1; /* Assurer que l'image de fond est derrière tout le contenu */
+}
+
+/* Image du header */
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h1.w3-jumbo {
+  font-size: 2rem; /* Taille du texte pour les petits écrans */
+  font-weight: bold;
+  color: #ffffff; /* Couleur du texte */
+  margin: 20px 0;
+  text-align: center;
+  line-height: 1.4; /* Espacement entre les lignes */
+  letter-spacing: 0.5px; /* Espacement entre les lettres */
+  text-transform: uppercase; /* Met en majuscule toutes les lettres */
+  font-family: 'Arial', sans-serif; /* Police de caractères */
+  transition: color 0.3s ease, transform 0.3s ease; 
+
+}
